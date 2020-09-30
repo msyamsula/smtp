@@ -41,13 +41,14 @@ public class SimpleSMTPgmail
         List<String> recipients = new ArrayList<String>();
         recipients.add("culcalcul22@gmail.com");
         recipients.add("syamsul@alterra.id");
+        recipients.add("enake@gmail.com");
 
         // looping through recipients
         for (int i=0; i<recipients.size(); i++){
             try {
                 // create session
                 Session session = Session.getDefaultInstance(p, null);
-                // session.setDebug(true);
+                session.setDebug(true);
                 
                 // mime message is message object, create it
                 Message m = new MimeMessage(session);
